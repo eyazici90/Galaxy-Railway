@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{23644F14-D252-4260-8C3F-8F800DFD828A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{435DDF80-5859-4302-9400-FF988557B487}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy-Railway", "src\Galaxy-Railway\Galaxy-Railway.csproj", "{CA4D724E-9D38-4F1D-989E-2FCFECDC23AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA4D724E-9D38-4F1D-989E-2FCFECDC23AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA4D724E-9D38-4F1D-989E-2FCFECDC23AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA4D724E-9D38-4F1D-989E-2FCFECDC23AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA4D724E-9D38-4F1D-989E-2FCFECDC23AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CA4D724E-9D38-4F1D-989E-2FCFECDC23AD} = {23644F14-D252-4260-8C3F-8F800DFD828A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A78E573-38EE-4BCE-85BA-983F056175BB}
+	EndGlobalSection
+EndGlobal

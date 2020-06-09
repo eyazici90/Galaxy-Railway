@@ -5,60 +5,60 @@ namespace Galaxy_Railway.Throws
 {
     public static class ThrowsExtensions
     {
-        public static async Task<T> ThrowsIfAsync<T>(this T @obj, Func<T, Task<bool>> assert, Exception exception)
+        public static async Task<T> ThrowsIfAsync<T>(this T @this, Func<T, Task<bool>> assert, Exception exception)
         {
-            var sut = await assert(@obj).ConfigureAwait(false);
+            var sut = await assert(@this).ConfigureAwait(false);
 
             if (sut)
                 throw exception;
 
-            return @obj;
+            return @this;
         }
 
-        public static T ThrowsIfNull<T>(this T @obj, Exception exception)
+        public static T ThrowsIfNull<T>(this T @this, Exception exception)
         {
-            if (@obj == null)
+            if (@this == null)
                 throw exception;
 
-            return @obj;
+            return @this;
         }
 
-        public static T ThrowsIf<T>(this T @obj, Func<T, bool> assert, Exception exception)
+        public static T ThrowsIf<T>(this T @this, Func<T, bool> assert, Exception exception)
         {
-            var sut = assert(@obj);
+            var sut = assert(@this);
 
             if (sut)
                 throw exception;
 
-            return @obj;
+            return @this;
         }
 
 
-        public static T ThrowsIf<T>(this T @obj, Func<T, bool> assert, Action<T> throwing)
+        public static T ThrowsIf<T>(this T @this, Func<T, bool> assert, Action<T> throwing)
         {
-            var sut = assert(@obj);
+            var sut = assert(@this);
 
             if (sut)
-                throwing(@obj);
+                throwing(@this);
 
-            return @obj;
+            return @this;
         }
 
-        public static async Task<T> ThrowsIfAsync<T>(this T @obj, Func<T, Task<bool>> assert, Func<T, Task> throwing)
+        public static async Task<T> ThrowsIfAsync<T>(this T @this, Func<T, Task<bool>> assert, Func<T, Task> throwing)
         {
-            var sut = await assert(@obj).ConfigureAwait(false);
+            var sut = await assert(@this).ConfigureAwait(false);
 
             if (sut)
-                await throwing(@obj).ConfigureAwait(false);
+                await throwing(@this).ConfigureAwait(false);
 
-            return @obj;
+            return @this;
         }
 
-        public static async Task<T> ThrowsIfAsync<T, TException>(this Task<T> @task,
+        public static async Task<T> ThrowsIfAsync<T, TException>(this Task<T> @this,
            Func<T, bool> assertion,
            TException exception) where TException : Exception
         {
-            var result = await @task.ConfigureAwait(false);
+            var result = await @this.ConfigureAwait(false);
 
             if (assertion(result))
                 throw exception;

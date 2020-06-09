@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace Galaxy_Railway.Throws
+namespace Galaxy_Railway
 {
     public static class ThrowsExtensions
     {

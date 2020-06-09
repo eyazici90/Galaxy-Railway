@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace Galaxy_Railway.Map
+namespace Galaxy_Railway
 {
     public static class MapExtensions
     {

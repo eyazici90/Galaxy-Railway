@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{435DDF80-5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy-Railway", "src\Galaxy-Railway\Galaxy-Railway.csproj", "{CA4D724E-9D38-4F1D-989E-2FCFECDC23AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy-Railway.Tests", "test\Galaxy-Railway.Tests\Galaxy-Railway.Tests.csproj", "{58D068BB-D965-4B7E-B08A-8167A38A74D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,12 +21,17 @@ Global
 		{CA4D724E-9D38-4F1D-989E-2FCFECDC23AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA4D724E-9D38-4F1D-989E-2FCFECDC23AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA4D724E-9D38-4F1D-989E-2FCFECDC23AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58D068BB-D965-4B7E-B08A-8167A38A74D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58D068BB-D965-4B7E-B08A-8167A38A74D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58D068BB-D965-4B7E-B08A-8167A38A74D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58D068BB-D965-4B7E-B08A-8167A38A74D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CA4D724E-9D38-4F1D-989E-2FCFECDC23AD} = {23644F14-D252-4260-8C3F-8F800DFD828A}
+		{58D068BB-D965-4B7E-B08A-8167A38A74D1} = {435DDF80-5859-4302-9400-FF988557B487}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8A78E573-38EE-4BCE-85BA-983F056175BB}

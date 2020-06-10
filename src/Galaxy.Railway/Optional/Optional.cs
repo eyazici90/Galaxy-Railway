@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Galaxy_Railway
+namespace Galaxy.Railway
 {
     public struct Optional<T> : IEnumerable<T>, IEquatable<Optional<T>>
     {

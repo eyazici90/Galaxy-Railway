@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Galaxy_Railway
+namespace Galaxy.Railway
 {
     public class ExecutionResult : IExecutionResult
     {

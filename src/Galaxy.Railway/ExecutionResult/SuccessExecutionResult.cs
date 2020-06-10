@@ -1,4 +1,4 @@
-﻿namespace Galaxy_Railway
+﻿namespace Galaxy.Railway
 {
     public class SuccessExecutionResult : ExecutionResult
     {

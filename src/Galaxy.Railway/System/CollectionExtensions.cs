@@ -33,6 +33,8 @@ namespace System
                 await func(doc).ConfigureAwait(false);
             }
         }
+        public static async Task ForEachAsync<T>(this IReadOnlyList<T> @objList,
+          Func<T, Task> func) => await @objList.ForEachAsync(func).ConfigureAwait(false);
 
         public static async Task<IEnumerable<TResult>> SelectAsync<T, TResult>(this Task<List<T>> source,
            Func<T, TResult> select) =>

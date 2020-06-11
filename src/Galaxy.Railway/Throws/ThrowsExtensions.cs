@@ -66,5 +66,16 @@ namespace Galaxy.Railway
             return result;
         }
 
+        public static async Task<T> ThrowsIfAsync<T, TException>(this Task<T> @this,
+         Func<T, Task<bool>> assertion,
+         TException exception) where TException : Exception
+        {
+            var result = await @this.ConfigureAwait(false);
+
+            if (await assertion(result).ConfigureAwait(false))
+                throw exception;
+
+            return result;
+        }
     }
 }

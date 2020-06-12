@@ -7,9 +7,9 @@ namespace Galaxy.Railway
     {
         public static TResult AndThen<T, TResult>(this T @this, Func<T, TResult> func) => func(@this);
 
-        public static T AndThen<T>(this T @this, Action<T> func)
+        public static T AndThen<T>(this T @this, Action<T> action)
         {
-            func(@this);
+            action(@this);
             return @this;
         }
         public static async Task<TResult> AndThenAsync<T, TResult>(this T @this,

@@ -29,6 +29,14 @@ namespace Galaxy.Railway
             return @this;
         }
 
+        public static async Task<T> IfAsync<T>(this T @this, bool condition, Func<T, Task<T>> func)
+        {
+            if (condition)
+               return await func(@this).ConfigureAwait(false);
+
+            return @this;
+        }
+
         public static async Task<T> IfAsync<T>(this Task<T> @this, bool condition, Func<T, Task> func)
         {
             var result = await @this.ConfigureAwait(false);
@@ -39,6 +47,15 @@ namespace Galaxy.Railway
             return result;
         }
 
+        public static async Task<T> IfAsync<T>(this Task<T> @this, bool condition, Func<T, Task<T>> func)
+        {
+            var result = await @this.ConfigureAwait(false);
+
+            if (condition)
+               return await func(result).ConfigureAwait(false);
+
+            return result;
+        }
         public static async Task<T> IfAsync<T>(this Task<T> @this, bool condition, Action<T> action)
         {
             var result = await @this.ConfigureAwait(false);

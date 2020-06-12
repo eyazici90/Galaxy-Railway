@@ -20,6 +20,10 @@ namespace Galaxy.Railway
         Func<T, Task> func) =>
         await func(@this).ConfigureAwait(false);
 
+        public static async Task AndThenAsync<T>(this Task<T> @this,
+           Action<T> action) =>
+            action(await @this.ConfigureAwait(false));
+
         public static async Task<TResult> AndThenAsync<T, TResult>(this Task<T> @this,
            Func<T, Task<TResult>> func) =>
            await func((await @this.ConfigureAwait(false))).ConfigureAwait(false);

@@ -15,8 +15,7 @@ namespace Galaxy_Railway.Tests
 
             var result = str.If(str.IsNullOrEmpty(), _ => "Amsterdam");
 
-            result.Should().NotBeNullOrEmpty();
-            result.Should().Be("Amsterdam");
+            result.Should().NotBeNullOrEmpty().And.Be("Amsterdam");
         }
 
         [Fact]
@@ -26,8 +25,7 @@ namespace Galaxy_Railway.Tests
 
             var result = await asyncStr.IfAsync(await asyncStr == string.Empty, async _ => "Amsterdam");
 
-            result.Should().NotBeNullOrEmpty();
-            result.Should().Be("Amsterdam");
+            result.Should().NotBeNullOrEmpty().And.Be("Amsterdam");
         }
     }
 }

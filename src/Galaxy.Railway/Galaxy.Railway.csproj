@@ -9,6 +9,7 @@
     <PackageProjectUrl>https://github.com/eyazici90/ImGalaxy</PackageProjectUrl>
     <PackageTags>Functional; Railway; Extensions</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
 </Project>

@@ -4,10 +4,11 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
- 
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Galaxy.Railway\Galaxy.Railway.csproj" />
+    <ProjectReference Include="..\..\src\Galaxy.Railway\Galaxy.Railway.csproj" />
   </ItemGroup>
+ 
+ 
 
 </Project>

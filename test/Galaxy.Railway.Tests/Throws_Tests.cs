@@ -19,7 +19,7 @@ namespace Galaxy_Railway.Tests
         }
 
         [Fact]
-        public async Task Should_throw_when_true_async()
+        public void Should_throw_when_true_async()
         {
             var city = Task.FromResult(string.Empty);
 

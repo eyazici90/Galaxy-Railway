@@ -1,9 +1,9 @@
 ﻿using System;
 
 namespace Galaxy.Railway.Examples
-{ 
+{
     public class Example1
-    { 
+    {
         public Unit Run(string city)
         {
             if (string.IsNullOrEmpty(city))
@@ -19,9 +19,9 @@ namespace Galaxy.Railway.Examples
 
             return Unit.Value;
         }
-         
+
         public Unit RunFunc(string city) =>
-               city.ThrowsIf(c => c.IsNullOrEmpty(), new ArgumentNullException())
+               city.ThrowsIf(string.IsNullOrEmpty, new ArgumentNullException())
                 .AndThen(c => c.Trim())
                 .Map(c => c.ToUpper())
                 .AndThen(Console.WriteLine)

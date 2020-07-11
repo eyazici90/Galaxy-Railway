@@ -16,12 +16,9 @@ namespace Galaxy.Railway.Examples
             {
                 throw new ArgumentNullException();
             }
-            var @obj = resut.Value;
-
-            var toLower = obj.ToLower();
-
-            await _send(toLower);
-
+            var @obj = resut.Value; 
+            var toLower = obj.ToLower(); 
+            await _send(toLower); 
             return ExecutionResult.Success;
         }
 

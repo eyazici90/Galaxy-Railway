@@ -6,13 +6,13 @@ namespace Galaxy.Railway
 {
     public struct Optional<T> : IEnumerable<T>, IEquatable<Optional<T>>
     {
-        public static readonly Optional<T> Empty = new Optional<T>();
+        public static Optional<T> Empty { get; } = new Optional<T>();
         private readonly T _value;
 
         public Optional(T value)
         {
             _value = value;
-            HasValue = value == null ? false : true;
+            HasValue = value != null;
         }
 
         public bool HasValue { get; }
